@@ -3,6 +3,7 @@ import logging
 import os
 
 EXAMPLE_CONFIG="""\"token\"=\"\" # the bot's token
+\"command_prefix\"=\"++\" # the bot's prefix to use for commands (e.g. ++help)
 \"server_ip\"=\"\" # the IP of the server to check status of
 """
 

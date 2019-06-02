@@ -4,7 +4,7 @@ from discord.ext import commands
 from cogs import status
 
 cfg = config.load_config()
-bot = commands.Bot(command_prefix="++")
+bot = commands.Bot(command_prefix=cfg["command_prefix"])
 
 COGS = [status.Status]
 def add_cogs(bot):
