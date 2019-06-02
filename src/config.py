@@ -3,6 +3,7 @@ import logging
 import os
 
 EXAMPLE_CONFIG="""\"token\"=\"\" # the bot's token
+\"server_ip\"=\"\" # the IP of the server to check status of
 """
 
 def load_config(path="./config.toml"):

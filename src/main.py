@@ -16,4 +16,4 @@ if __name__ == "__main__":
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
-bot.run()
+    bot.run()
