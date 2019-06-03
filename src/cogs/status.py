@@ -1,5 +1,6 @@
 from discord.ext import commands
 import discord
+import websockets
 import asyncio
 from mcstatus import MinecraftServer
 
@@ -27,7 +28,10 @@ class Status(commands.Cog):
 
     async def periodically_update_presence(self, interval=5):
         while True:
-            await self.update_presence()
+            try:
+                await self.update_presence()
+            except ws.exceptions.ConnectionClosed:
+                pass
             await asyncio.sleep(interval)
 
     async def update_presence(self):
